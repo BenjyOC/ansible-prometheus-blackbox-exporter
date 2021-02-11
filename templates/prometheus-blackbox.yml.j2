@@ -5,10 +5,11 @@ modules:
     http:
       valid_status_codes: [] # par defaut, 2XX
       method: GET
-      fail_if_body_matches_regexp:
-        - "Body matches regexp"
-      fail_if_body_not_matches_regexp:
-        - "Body not matches regexp"
+      preferred_ip_protocol: ip4
+      # fail_if_body_matches_regexp:
+      #   - "Body matches regexp"
+      # fail_if_body_not_matches_regexp:
+      #   - "Body not matches regexp"
   icmp_check:
     prober: icmp
     timeout: 5s
